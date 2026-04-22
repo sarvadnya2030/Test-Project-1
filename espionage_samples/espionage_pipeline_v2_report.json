@@ -1,0 +1,200 @@
+{
+  "pipeline": {
+    "asr_model": "BELLE-2/Belle-whisper-large-v3-zh",
+    "translation_model": "facebook/nllb-200-1.3B",
+    "scoring_model": "sentence-transformers/LaBSE"
+  },
+  "averages": {
+    "cer": 0.2153,
+    "meaning_similarity": 0.7331,
+    "meaning_loss": 0.2669,
+    "code_word_recall": 0.4
+  },
+  "samples": [
+    {
+      "sample_id": 1,
+      "source_zh": "指挥官：狐狸编队准备就绪，确认目标坐标三五点六北纬。专家：收到，狐狸一号至十号全员待命，夜莺卫星图像已传输。",
+      "asr_raw": "指挥官狐狸编队准备绝续确认目标坐标三五点六卑微专家收到狐狸一号至十号全员待命夜鹰卫星图像已传输",
+      "asr_normalized": "指挥官狐狸编队准备绝续确认目标坐标三五点六卑微专家收到狐狸一号至十号全员待命夜鹰卫星图像已传输",
+      "translation_en": "指挥官狐狐编队准备绝续确认目标坐标三五点六卑微专家收到狐一号至十号全员待命夜卫星图片已传输",
+      "cer": 0.1923,
+      "meaning_similarity": 0.7319,
+      "meaning_loss": 0.2681,
+      "expected_code_words": [
+        "狐狸",
+        "夜莺"
+      ],
+      "detected_zh": [
+        "狐狸"
+      ],
+      "detected_en": [],
+      "code_word_recall": 0.5
+    },
+    {
+      "sample_id": 2,
+      "source_zh": "专家：鲨鱼信号确认，方位一二零度，距离四十五海里。指挥官：启动黑剑拦截程序，苍鹰中队立即升空。",
+      "asr_raw": "专家闪语信号确认方位一二零度距离四十五海里指挥官席都推荐拦截程序苍蝇中队立即升空",
+      "asr_normalized": "专家闪语信号确认方位一二零度距离四十五海里指挥官席都推荐拦截程序苍蝇中队立即升空",
+      "translation_en": "专家闪语信号 确认 方位 一二零度 距离 四十五海里 指挥官席都 推拦截程序 中队立即升空 ",
+      "cer": 0.2667,
+      "meaning_similarity": 0.6967,
+      "meaning_loss": 0.3033,
+      "expected_code_words": [
+        "鲨鱼",
+        "苍鹰",
+        "黑剑"
+      ],
+      "detected_zh": [],
+      "detected_en": [],
+      "code_word_recall": 0.0
+    },
+    {
+      "sample_id": 3,
+      "source_zh": "指挥官：幽灵小队已通过铁拳火力掩护，成功渗透敌后。专家：银狐线人确认敌指挥部位置，坐标已发送。",
+      "asr_raw": "指挥官游林小队已通过提拳火力掩护成功渗透敌后专家银湖线人确认敌指挥部为止坐标已发送",
+      "asr_normalized": "指挥官游林小队已通过提拳火力掩护成功渗透敌后专家银湖线人确认敌指挥部为止坐标已发送",
+      "translation_en": "指挥官游林小队已经通过提拳火力掩护成功透敌后专家银湖线人确认敌指挥部止坐标已发送",
+      "cer": 0.2222,
+      "meaning_similarity": 0.7507,
+      "meaning_loss": 0.2493,
+      "expected_code_words": [
+        "幽灵",
+        "铁拳",
+        "银狐"
+      ],
+      "detected_zh": [],
+      "detected_en": [],
+      "code_word_recall": 0.0
+    },
+    {
+      "sample_id": 4,
+      "source_zh": "专家：毒蛇已成功渗透目标网络，获取指挥系统权限。指挥官：启动暗流程序，瘫痪敌方系统。",
+      "asr_raw": "专家博水以成功渗透目标网络获取指挥系统权限指挥官启动爱流程序瘫痪敌方系统",
+      "asr_normalized": "专家博水以成功渗透目标网络获取指挥系统权限指挥官启动爱流程序瘫痪敌方系统",
+      "translation_en": "专家博水以成功透目标网络获取指挥系统权限指挥官启动爱流程序敌方系统 专家博水以成功透目标网络获取指挥系统权限指挥官启动爱流程序 敌方系统",
+      "cer": 0.2,
+      "meaning_similarity": 0.6601,
+      "meaning_loss": 0.3399,
+      "expected_code_words": [
+        "毒蛇",
+        "暗流"
+      ],
+      "detected_zh": [],
+      "detected_en": [],
+      "code_word_recall": 0.0
+    },
+    {
+      "sample_id": 5,
+      "source_zh": "指挥官：红旗雷达侦测到黑剑来袭，铁网系统启动。专家：铁网拦截成功，黑剑残骸落入预定区域。",
+      "asr_raw": "指挥官恐其雷达侦测到黑箭来袭天网系统启动专家天网拦截成功黑箭残骸落入预定区域",
+      "asr_normalized": "指挥官恐其雷达侦测到黑箭来袭天网系统启动专家天网拦截成功黑箭残骸落入预定区域",
+      "translation_en": "指挥官恐其雷达 detected to黑箭来袭天网系统启动专家天网拦截成功黑箭残骸落入预定区域",
+      "cer": 0.2381,
+      "meaning_similarity": 0.7237,
+      "meaning_loss": 0.2763,
+      "expected_code_words": [
+        "黑剑",
+        "红旗",
+        "铁网"
+      ],
+      "detected_zh": [],
+      "detected_en": [],
+      "code_word_recall": 0.0
+    },
+    {
+      "sample_id": 6,
+      "source_zh": "专家：银狐准备就绪，请求狐狸空中接应。指挥官：狐狸三号正在接近，预计三分钟到达。",
+      "asr_raw": "专家银狐准备继续请求狐狸空中接应指挥官狐狸三号正在接近预计三分钟到达",
+      "asr_normalized": "专家银狐准备继续请求狐狸空中接应指挥官狐狸三号正在接近预计三分钟到达",
+      "translation_en": "专家银狐狐准备继续请求狐空中接应指挥官狐三号正在接近预计三分钟到达",
+      "cer": 0.1579,
+      "meaning_similarity": 0.7743,
+      "meaning_loss": 0.2257,
+      "expected_code_words": [
+        "狐狸",
+        "银狐"
+      ],
+      "detected_zh": [
+        "狐狸",
+        "银狐"
+      ],
+      "detected_en": [],
+      "code_word_recall": 1.0
+    },
+    {
+      "sample_id": 7,
+      "source_zh": "指挥官：铁拳锁定目标，坐标二三到四五，反复三次确认。专家：铁拳就绪，火力覆盖范围已设定。",
+      "asr_raw": "指挥官铁拳锁定目标坐标二三到四五反复三次确认正加铁拳继续火力覆盖范围已设定",
+      "asr_normalized": "指挥官铁拳锁定目标坐标二三到四五反复三次确认正加铁拳继续火力覆盖范围已设定",
+      "translation_en": "指挥官铁拳锁定目标坐标二三到四五反复三次确认正加铁拳继续火力覆盖范围已设置",
+      "cer": 0.2143,
+      "meaning_similarity": 0.7331,
+      "meaning_loss": 0.2669,
+      "expected_code_words": [
+        "铁拳"
+      ],
+      "detected_zh": [
+        "铁拳"
+      ],
+      "detected_en": [],
+      "code_word_recall": 1.0
+    },
+    {
+      "sample_id": 8,
+      "source_zh": "专家：苍鹰中队报告，敌机已被击落两架。指挥官：维持苍鹰编队高度，防止雷霆反击。",
+      "asr_raw": "专家苍蝇中队报告敌机已被击落两架指挥官维持苍蝇面对高度防止雷霆反击",
+      "asr_normalized": "专家苍蝇中队报告敌机已被击落两架指挥官维持苍蝇面对高度防止雷霆反击",
+      "translation_en": "专家中队报告敌机已被击落两架指挥官维持面对高度防止雷反击",
+      "cer": 0.2162,
+      "meaning_similarity": 0.7443,
+      "meaning_loss": 0.2557,
+      "expected_code_words": [
+        "苍鹰",
+        "雷霆"
+      ],
+      "detected_zh": [
+        "雷霆"
+      ],
+      "detected_en": [],
+      "code_word_recall": 0.5
+    },
+    {
+      "sample_id": 9,
+      "source_zh": "指挥官：迷雾电子战系统启动，压制红旗雷达信号。专家：红旗信号已消失，敌方防空盲区形成。",
+      "asr_raw": "指挥官你有电子战系统启动压制红旗雷达信号专家红旗信号已消失敌方防空盲区行程",
+      "asr_normalized": "指挥官你有电子战系统启动压制红旗雷达信号专家红旗信号已消失敌方防空盲区行程",
+      "translation_en": "指挥官你有电子战系统启动压制红旗雷达信号专家红旗信号已消失敌方防空盲区行程",
+      "cer": 0.1951,
+      "meaning_similarity": 0.7616,
+      "meaning_loss": 0.2384,
+      "expected_code_words": [
+        "红旗",
+        "迷雾"
+      ],
+      "detected_zh": [
+        "红旗"
+      ],
+      "detected_en": [],
+      "code_word_recall": 0.5
+    },
+    {
+      "sample_id": 10,
+      "source_zh": "专家：指挥部遭遇暗流攻击，网络已完全瘫痪。指挥官：启动备用通信，银狐立即转移至B点。",
+      "asr_raw": "专家指挥部早已暗流攻击网络已完全瘫痪指挥官启动边友通信年活立即转移至B点",
+      "asr_normalized": "专家指挥部早已暗流攻击网络已完全瘫痪指挥官启动边友通信年活立即转移至B点",
+      "translation_en": "专家指挥部早已暗流攻击网络已完全指挥官启动边友通信年活立即转移到B点",
+      "cer": 0.25,
+      "meaning_similarity": 0.7544,
+      "meaning_loss": 0.2456,
+      "expected_code_words": [
+        "银狐",
+        "暗流"
+      ],
+      "detected_zh": [
+        "暗流"
+      ],
+      "detected_en": [],
+      "code_word_recall": 0.5
+    }
+  ]
+}

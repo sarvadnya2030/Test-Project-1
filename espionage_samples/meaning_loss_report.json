@@ -1,0 +1,156 @@
+{
+  "summary": {
+    "metric_explanation": {
+      "meaning_similarity": "LaBSE cosine similarity between Mandarin source and English translation. 1.0 = identical meaning, 0.0 = unrelated.",
+      "meaning_loss": "1 - meaning_similarity. How much semantic content was lost. 0.0 = perfect, 1.0 = total loss.",
+      "translation_divergence": "How differently BELLE and Whisper translated the same audio. 0.0 = identical, 1.0 = completely different.",
+      "cer": "Character Error Rate of ASR vs reference. Lower = better transcription.",
+      "pipeline_loss_chain": "ASR CER → captures transcription error. Meaning loss → captures translation semantic gap. Combined, they show where meaning degrades: at the speech-to-text step or the text-to-text step."
+    },
+    "belle": {
+      "avg_meaning_similarity": 0.6473,
+      "avg_meaning_loss": 0.3527,
+      "avg_cer": 0.1318
+    },
+    "whisper": {
+      "avg_meaning_similarity": 0.645,
+      "avg_meaning_loss": 0.355,
+      "avg_cer": 0.1709
+    },
+    "avg_translation_divergence": 0.1883,
+    "winner_asr": "BELLE",
+    "winner_translation": "BELLE"
+  },
+  "samples": [
+    {
+      "sample_id": 1,
+      "mandarin": "指挥官：狐狸编队准备就绪，确认目标坐标三五点六北纬。专家：收到，狐狸一号至十号全员待命，夜莺卫星图像已传输。",
+      "belle_english": "The commander Fox squad is ready to confirm the target coordinates at 3:56 PM, and the low-level experts have received Fox 1 to 10 as well as the new images that have been transmitted.",
+      "whisper_english": "The commander's Fox squad is preparing to continue to confirm that the target coordinate 356 is being received by the Foxes 1 to 10 crew, who are also awaiting death because new images have been transmitted.",
+      "belle_meaning_similarity": 0.5476,
+      "whisper_meaning_similarity": 0.4796,
+      "belle_meaning_loss": 0.4524,
+      "whisper_meaning_loss": 0.5204,
+      "translation_divergence": 0.2629,
+      "belle_cer": 0.1702,
+      "whisper_cer": 0.2553
+    },
+    {
+      "sample_id": 2,
+      "mandarin": "专家：鲨鱼信号确认，方位一二零度，距离四十五海里。指挥官：启动黑剑拦截程序，苍鹰中队立即升空。",
+      "belle_english": "The experts of the shuttle signal confirm the direction of the commander's seat at a distance of 405 nautical miles, and recommend that the intercepting program crew take off immediately.",
+      "whisper_english": "Expert flash signal confirms direction 120 degrees from 45 nautical miles commander to start meeting intercepting procedure",
+      "belle_meaning_similarity": 0.5818,
+      "whisper_meaning_similarity": 0.676,
+      "belle_meaning_loss": 0.4182,
+      "whisper_meaning_loss": 0.324,
+      "translation_divergence": 0.3819,
+      "belle_cer": 0.2,
+      "whisper_cer": 0.275
+    },
+    {
+      "sample_id": 3,
+      "mandarin": "指挥官：幽灵小队已通过铁拳火力掩护，成功渗透敌后。专家：银狐线人确认敌指挥部位置，坐标已发送。",
+      "belle_english": "The commander of the Yulin Squadron has successfully penetrated the enemy through the use of the firepower of the T-Fist, after which the expert Lin Lin Lin Lin Lin Lin Lin of Ning Lake confirmed the enemy command had been sent to the coordinates.",
+      "whisper_english": "The commander of the Wing Wing Wing has successfully penetrated the enemy by using full fire cover, after which the Silver Lake linear expert confirmed the enemy command position coordinates have been sent",
+      "belle_meaning_similarity": 0.5724,
+      "whisper_meaning_similarity": 0.6595,
+      "belle_meaning_loss": 0.4276,
+      "whisper_meaning_loss": 0.3405,
+      "translation_divergence": 0.2701,
+      "belle_cer": 0.1707,
+      "whisper_cer": 0.122
+    },
+    {
+      "sample_id": 4,
+      "mandarin": "专家：毒蛇已成功渗透目标网络，获取指挥系统权限。指挥官：启动暗流程序，瘫痪敌方系统。",
+      "belle_english": "Expert Boomerang to successfully penetrate target networks to gain command system authorization commanders to launch love flow program to defeat enemy systems",
+      "whisper_english": "Expert Boomerang to successfully penetrate target networks to gain command system authorization commanders to launch love flow program to defeat enemy systems",
+      "belle_meaning_similarity": 0.6536,
+      "whisper_meaning_similarity": 0.6536,
+      "belle_meaning_loss": 0.3464,
+      "whisper_meaning_loss": 0.3464,
+      "translation_divergence": 0.0,
+      "belle_cer": 0.1111,
+      "whisper_cer": 0.1111
+    },
+    {
+      "sample_id": 5,
+      "mandarin": "指挥官：红旗雷达侦测到黑剑来袭，铁网系统启动。专家：铁网拦截成功，黑剑残骸落入预定区域。",
+      "belle_english": "Commander Kaczynski radar detects the Black Arrows attack the Sky System launches the expert Skynet intercepted the wreckage of the Black Arrows successfully landing in the designated area",
+      "whisper_english": "Commander Air Radar detects the Black Arrows attack the Sky System launches the creator of the Skynet to intercept the wreckage of the Black Arrows successfully landing in the designated area",
+      "belle_meaning_similarity": 0.6419,
+      "whisper_meaning_similarity": 0.6642,
+      "belle_meaning_loss": 0.3581,
+      "whisper_meaning_loss": 0.3358,
+      "translation_divergence": 0.1556,
+      "belle_cer": 0.1579,
+      "whisper_cer": 0.1842
+    },
+    {
+      "sample_id": 6,
+      "mandarin": "专家：银狐准备就绪，请求狐狸空中接应。指挥官：狐狸三号正在接近，预计三分钟到达。",
+      "belle_english": "Expert Silver Fox is ready to continue requesting Fox Air Response Commander Fox 3 is approaching expected arrival in three minutes",
+      "whisper_english": "Experts at Silver Lake are preparing to continue requesting Fox Air Response Commander Fox 3 is approaching expected arrival in three minutes.",
+      "belle_meaning_similarity": 0.7325,
+      "whisper_meaning_similarity": 0.713,
+      "belle_meaning_loss": 0.2675,
+      "whisper_meaning_loss": 0.287,
+      "translation_divergence": 0.0826,
+      "belle_cer": 0.0588,
+      "whisper_cer": 0.0882
+    },
+    {
+      "sample_id": 7,
+      "mandarin": "指挥官：铁拳锁定目标，坐标二三到四五，反复三次确认。专家：铁拳就绪，火力覆盖范围已设定。",
+      "belle_english": "Commander Iron Fist locks target coordinates 2-3-4-5 Repeat three times confirms that the range of firefighting continues",
+      "whisper_english": "Commander Iron Fist Locks Target Coordinate 2345 Repeatedly Three Repeats Confirm that the Fist of the Gang continues to be set to fire",
+      "belle_meaning_similarity": 0.6158,
+      "whisper_meaning_similarity": 0.6116,
+      "belle_meaning_loss": 0.3842,
+      "whisper_meaning_loss": 0.3884,
+      "translation_divergence": 0.2392,
+      "belle_cer": 0.0811,
+      "whisper_cer": 0.2432
+    },
+    {
+      "sample_id": 8,
+      "mandarin": "专家：苍鹰中队报告，敌机已被击落两架。指挥官：维持苍鹰编队高度，防止雷霆反击。",
+      "belle_english": "The Special Forces report that two commanders have shot down enemy aircraft while maintaining the airframe against high-altitude thunderstorms.",
+      "whisper_english": "The Special Operations Squadron reports that two commanders have shot down enemy aircraft in the field of operations in the face of high-altitude thunderstorms.",
+      "belle_meaning_similarity": 0.6763,
+      "whisper_meaning_similarity": 0.5982,
+      "belle_meaning_loss": 0.3237,
+      "whisper_meaning_loss": 0.4018,
+      "translation_divergence": 0.1208,
+      "belle_cer": 0.1212,
+      "whisper_cer": 0.1818
+    },
+    {
+      "sample_id": 9,
+      "mandarin": "指挥官：迷雾电子战系统启动，压制红旗雷达信号。专家：红旗信号已消失，敌方防空盲区形成。",
+      "belle_english": "Commander is planning to launch electronic warfare system to compress red flag radar signal expert red flag signal has disappeared enemy air blind zone route",
+      "whisper_english": "Commander you have electronic warfare system to start compressing red flag radar signal expert red flag signal has disappeared enemy air blind zone formed",
+      "belle_meaning_similarity": 0.7576,
+      "whisper_meaning_similarity": 0.7898,
+      "belle_meaning_loss": 0.2424,
+      "whisper_meaning_loss": 0.2102,
+      "translation_divergence": 0.0835,
+      "belle_cer": 0.1081,
+      "whisper_cer": 0.0541
+    },
+    {
+      "sample_id": 10,
+      "mandarin": "专家：指挥部遭遇暗流攻击，网络已完全瘫痪。指挥官：启动备用通信，银狐立即转移至B点。",
+      "belle_english": "The expert command has already been dark-flowing attack networks that have completely blocked commanders from starting the change in communications year live and immediately transferred to point B.",
+      "whisper_english": "The expert command has already been on the stream attack network and has completely blocked the commander to start the change in communications.",
+      "belle_meaning_similarity": 0.6933,
+      "whisper_meaning_similarity": 0.6049,
+      "belle_meaning_loss": 0.3067,
+      "whisper_meaning_loss": 0.3951,
+      "translation_divergence": 0.2862,
+      "belle_cer": 0.1389,
+      "whisper_cer": 0.1944
+    }
+  ]
+}

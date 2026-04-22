@@ -1,0 +1,186 @@
+{
+  "summary": {
+    "models": {
+      "A": {
+        "id": "facebook/nllb-200-distilled-600M",
+        "input": "belle_asr",
+        "avg_similarity": 0.6473,
+        "avg_loss": 0.3527
+      },
+      "B": {
+        "id": "facebook/nllb-200-1.3B",
+        "input": "belle_asr",
+        "avg_similarity": 0.7252,
+        "avg_loss": 0.2748
+      },
+      "C": {
+        "id": "Helsinki-NLP/opus-mt-zh-en",
+        "input": "belle_asr",
+        "avg_similarity": 0.6317,
+        "avg_loss": 0.3683
+      },
+      "D": {
+        "id": "facebook/nllb-200-1.3B",
+        "input": "gold_mandarin",
+        "avg_similarity": 0.9721,
+        "avg_loss": 0.0279,
+        "note": "translation ceiling — no ASR error"
+      }
+    },
+    "best_model_from_asr": "nllb-1.3B",
+    "gain_over_baseline": 0.0779,
+    "asr_induced_loss": 0.2469
+  },
+  "samples": [
+    {
+      "mandarin": "指挥官：狐狸编队准备就绪，确认目标坐标三五点六北纬。专家：收到，狐狸一号至十号全员待命，夜莺卫星图像已传输。",
+      "A_nllb600m_from_asr": "The commander Fox squad is ready to confirm the target coordinates at 3:56 PM, and the low-level experts have received Fox 1 to 10 as well as the new images that have been transmitted.",
+      "A_similarity": 0.5476,
+      "A_meaning_loss": 0.4524,
+      "B_nllb1_3b_from_asr": "指挥官狐狐编队准备绝续确认目标坐标三五点六卑微专家收到狐一号至十号全员待命也因为新图像已传输",
+      "B_similarity": 0.7052,
+      "B_meaning_loss": 0.2948,
+      "C_opus_big_from_asr": "Commander Fox formations are ready to confirm that all Fox One through 10 are on standby for target coordinates 3:56 and that the new images have been transmitted.",
+      "C_similarity": 0.585,
+      "C_meaning_loss": 0.415,
+      "D_nllb1_3b_from_gold": "指挥官:狐编队准备就绪,确认目标坐标三五点六北。专家: received,狐一号至十号全员待命,夜卫星图像已传输。",
+      "D_similarity": 0.9576,
+      "D_meaning_loss": 0.0424
+    },
+    {
+      "mandarin": "专家：鲨鱼信号确认，方位一二零度，距离四十五海里。指挥官：启动黑剑拦截程序，苍鹰中队立即升空。",
+      "A_nllb600m_from_asr": "The experts of the shuttle signal confirm the direction of the commander's seat at a distance of 405 nautical miles, and recommend that the intercepting program crew take off immediately.",
+      "A_similarity": 0.5818,
+      "A_meaning_loss": 0.4182,
+      "B_nllb1_3b_from_asr": "专家闪屿信号信号确认方位一二零度距四十五海里指挥官席都推拦截程序中队立即升空",
+      "B_similarity": 0.6827,
+      "B_meaning_loss": 0.3173,
+      "C_opus_big_from_asr": "The expert flash confirmed the position at forty-five nautical miles.",
+      "C_similarity": 0.5538,
+      "C_meaning_loss": 0.4462,
+      "D_nllb1_3b_from_gold": "专家:鱼信号确认,方位一二零度,距离四十五海里。指挥官:启动黑剑拦截程序,中队立即升空。",
+      "D_similarity": 0.9549,
+      "D_meaning_loss": 0.0451
+    },
+    {
+      "mandarin": "指挥官：幽灵小队已通过铁拳火力掩护，成功渗透敌后。专家：银狐线人确认敌指挥部位置，坐标已发送。",
+      "A_nllb600m_from_asr": "The commander of the Yulin Squadron has successfully penetrated the enemy through the use of the firepower of the T-Fist, after which the expert Lin Lin Lin Lin Lin Lin Lin of Ning Lake confirmed the enemy command had been sent to the coordinates.",
+      "A_similarity": 0.5724,
+      "A_meaning_loss": 0.4276,
+      "B_nllb1_3b_from_asr": "指挥官游林小队已经通过提拳火力掩护成功透敌后专家宁湖线人确认敌指挥部为止坐标已发送",
+      "B_similarity": 0.7138,
+      "B_meaning_loss": 0.2862,
+      "C_opus_big_from_asr": "The Commander's Rangers have successfully infiltrated the enemy under the cover of their fists, and the expert Lake Ning informant has confirmed that the enemy command coordinates have been sent so far.",
+      "C_similarity": 0.6488,
+      "C_meaning_loss": 0.3512,
+      "D_nllb1_3b_from_gold": "指挥官:幽灵小队已经通过铁拳火力掩护,成功透敌后。专家:银狐线人确认敌指挥部位置,坐标已发送。",
+      "D_similarity": 0.9791,
+      "D_meaning_loss": 0.0209
+    },
+    {
+      "mandarin": "专家：毒蛇已成功渗透目标网络，获取指挥系统权限。指挥官：启动暗流程序，瘫痪敌方系统。",
+      "A_nllb600m_from_asr": "Expert Boomerang to successfully penetrate target networks to gain command system authorization commanders to launch love flow program to defeat enemy systems",
+      "A_similarity": 0.6536,
+      "A_meaning_loss": 0.3464,
+      "B_nllb1_3b_from_asr": "专家博水以成功透目标网络获取指挥系统权限指挥官启动爱流程序敌方系统 专家博水以成功透目标网络获取指挥系统权限指挥官启动爱流程序 敌方系统",
+      "B_similarity": 0.6601,
+      "B_meaning_loss": 0.3399,
+      "C_opus_big_from_asr": "The specialist has successfully infiltrated the target network to gain command chain authority.",
+      "C_similarity": 0.6831,
+      "C_meaning_loss": 0.3169,
+      "D_nllb1_3b_from_gold": "专家:毒蛇已成功透目标网络,获取指挥系统权限。指挥官:启动暗流程序,敌方系统。",
+      "D_similarity": 0.9655,
+      "D_meaning_loss": 0.0345
+    },
+    {
+      "mandarin": "指挥官：红旗雷达侦测到黑剑来袭，铁网系统启动。专家：铁网拦截成功，黑剑残骸落入预定区域。",
+      "A_nllb600m_from_asr": "Commander Kaczynski radar detects the Black Arrows attack the Sky System launches the expert Skynet intercepted the wreckage of the Black Arrows successfully landing in the designated area",
+      "A_similarity": 0.6419,
+      "A_meaning_loss": 0.3581,
+      "B_nllb1_3b_from_asr": "指挥官空奇雷达 detected to黑箭来袭天网系统启动专家天网拦截成功黑箭残骸落入预定区域",
+      "B_similarity": 0.712,
+      "B_meaning_loss": 0.288,
+      "C_opus_big_from_asr": "Commander Skyfleet radar detected black arrows hitting Skynet.",
+      "C_similarity": 0.5721,
+      "C_meaning_loss": 0.4279,
+      "D_nllb1_3b_from_gold": "指挥官:红旗雷达 detected to黑剑来袭,铁网系统启动。专家:铁网拦截成功,黑剑残骸落入预定区域。",
+      "D_similarity": 0.9887,
+      "D_meaning_loss": 0.0113
+    },
+    {
+      "mandarin": "专家：银狐准备就绪，请求狐狸空中接应。指挥官：狐狸三号正在接近，预计三分钟到达。",
+      "A_nllb600m_from_asr": "Expert Silver Fox is ready to continue requesting Fox Air Response Commander Fox 3 is approaching expected arrival in three minutes",
+      "A_similarity": 0.7325,
+      "A_meaning_loss": 0.2675,
+      "B_nllb1_3b_from_asr": "专家银狐狐准备继续请求狐空中接应指挥官狐三号正在接近预计三分钟到达",
+      "B_similarity": 0.7743,
+      "B_meaning_loss": 0.2257,
+      "C_opus_big_from_asr": "The expert Silver Fox is ready to continue to request the Flying Fox Reconnaissance Commander Fox Three to arrive in the expected three minutes.",
+      "C_similarity": 0.7088,
+      "C_meaning_loss": 0.2912,
+      "D_nllb1_3b_from_gold": "专家:银狐狐准备就绪,请求狐空中接应。指挥官:狐三号正在接近,预计三分钟到达。",
+      "D_similarity": 0.9744,
+      "D_meaning_loss": 0.0256
+    },
+    {
+      "mandarin": "指挥官：铁拳锁定目标，坐标二三到四五，反复三次确认。专家：铁拳就绪，火力覆盖范围已设定。",
+      "A_nllb600m_from_asr": "Commander Iron Fist locks target coordinates 2-3-4-5 Repeat three times confirms that the range of firefighting continues",
+      "A_similarity": 0.6158,
+      "A_meaning_loss": 0.3842,
+      "B_nllb1_3b_from_asr": "指挥官铁拳锁定目标坐标二三到四五反复三次确认家铁拳继续火力覆盖范围已设置",
+      "B_similarity": 0.7346,
+      "B_meaning_loss": 0.2654,
+      "C_opus_big_from_asr": "Commander Tekken has locked in the target coordinates two, three, four, five, three times, and confirmed that Cheng's continued fire coverage has been set.",
+      "C_similarity": 0.5894,
+      "C_meaning_loss": 0.4106,
+      "D_nllb1_3b_from_gold": "指挥官:铁拳锁定目标,坐标二三到四五,反复三次确认。专家:铁拳就绪,火力覆盖范围已设置。",
+      "D_similarity": 0.9916,
+      "D_meaning_loss": 0.0084
+    },
+    {
+      "mandarin": "专家：苍鹰中队报告，敌机已被击落两架。指挥官：维持苍鹰编队高度，防止雷霆反击。",
+      "A_nllb600m_from_asr": "The Special Forces report that two commanders have shot down enemy aircraft while maintaining the airframe against high-altitude thunderstorms.",
+      "A_similarity": 0.6763,
+      "A_meaning_loss": 0.3237,
+      "B_nllb1_3b_from_asr": "专家中队报告敌机已被击落两架指挥官维持面对高度防止雷反击",
+      "B_similarity": 0.7443,
+      "B_meaning_loss": 0.2557,
+      "C_opus_big_from_asr": "Specialist Flies Squadron reports enemy aircraft have been shot down by two commanders to maintain the fly at high altitude to prevent a thunder strike.",
+      "C_similarity": 0.7443,
+      "C_meaning_loss": 0.2557,
+      "D_nllb1_3b_from_gold": "专家:中队报告,敌机已经被击落两架。指挥官:维持编队高度,防止雷反击。",
+      "D_similarity": 0.9391,
+      "D_meaning_loss": 0.0609
+    },
+    {
+      "mandarin": "指挥官：迷雾电子战系统启动，压制红旗雷达信号。专家：红旗信号已消失，敌方防空盲区形成。",
+      "A_nllb600m_from_asr": "Commander is planning to launch electronic warfare system to compress red flag radar signal expert red flag signal has disappeared enemy air blind zone route",
+      "A_similarity": 0.7576,
+      "A_meaning_loss": 0.2424,
+      "B_nllb1_3b_from_asr": "指挥官拟用电子战系统启动压制红旗雷达信号专家红旗信号已消失敌方防空盲区行程",
+      "B_similarity": 0.7423,
+      "B_meaning_loss": 0.2577,
+      "C_opus_big_from_asr": "The commanding officer intends to use the electronic warfare system to activate the Red Flag radar signal expert, the enemy's anti-aircraft blind area.",
+      "C_similarity": 0.615,
+      "C_meaning_loss": 0.385,
+      "D_nllb1_3b_from_gold": "指挥官:迷雾电子战系统启动,压制红旗雷达信号。专家:红旗信号已消失,敌方防空盲区形成。",
+      "D_similarity": 0.9923,
+      "D_meaning_loss": 0.0077
+    },
+    {
+      "mandarin": "专家：指挥部遭遇暗流攻击，网络已完全瘫痪。指挥官：启动备用通信，银狐立即转移至B点。",
+      "A_nllb600m_from_asr": "The expert command has already been dark-flowing attack networks that have completely blocked commanders from starting the change in communications year live and immediately transferred to point B.",
+      "A_similarity": 0.6933,
+      "A_meaning_loss": 0.3067,
+      "B_nllb1_3b_from_asr": "专家指挥部早已暗流攻击网络已完全指挥官启动变用通信年活立即转移到B点",
+      "B_similarity": 0.7828,
+      "B_meaning_loss": 0.2172,
+      "C_opus_big_from_asr": "The expert command has now completely disabled the commanding officer to initiate the transition to point B immediately.",
+      "C_similarity": 0.6168,
+      "C_meaning_loss": 0.3832,
+      "D_nllb1_3b_from_gold": "专家:指挥部遭遇暗流攻击,网络已完全。指挥官:启动备用通信,银狐立即转移至B点。",
+      "D_similarity": 0.9777,
+      "D_meaning_loss": 0.0223
+    }
+  ]
+}

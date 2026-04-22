@@ -1,0 +1,10 @@
+torch>=2.5.0
+torchaudio
+transformers>=4.40.0
+sentence-transformers
+soundfile
+pandas
+tqdm
+requests
+accelerate
+safetensors

@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+dist/
+build/
+
+# HuggingFace model cache (multi-GB — download separately)
+.cache/
+~/.cache/huggingface/
+
+# Generated reports (timestamped)
+intel_fast_report_*.txt
+intel_fast_report_*.json
+intel_report_*.txt
+intel_report_*.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
