@@ -10,11 +10,11 @@ build/
 .cache/
 ~/.cache/huggingface/
 
-# Generated reports (timestamped)
-intel_fast_report_*.txt
-intel_fast_report_*.json
-intel_report_*.txt
-intel_report_*.json
+# Generated reports (timestamped) — exclude root-level only, keep sample_reports/
+/intel_fast_report_*.txt
+/intel_fast_report_*.json
+/intel_report_*.txt
+/intel_report_*.json
 
 # Jupyter
 .ipynb_checkpoints/

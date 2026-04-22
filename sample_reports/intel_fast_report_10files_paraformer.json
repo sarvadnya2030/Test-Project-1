@@ -1,0 +1,183 @@
+[
+  {
+    "sample_id": 1,
+    "wav": "espionage_samples/espionage_01.wav",
+    "asr_raw": "指挥官狐狸编队准备军训，确认目标坐标三五点六倍纬。专家说道。狐狸一号至十号全员待命，夜莺卫星图像已传输。",
+    "translation_en": "General Fox is preparing the formation for military training, confirming the target coordinates as three and five point six times the latitude. Expert says: 'Fox One to Ten are all on standby. The images from the Nightingale satellite have been transmitted.'",
+    "similarity": 0.7827,
+    "intent": {
+      "translation": "General Fox is preparing the formation for military training, confirming the target coordinates as three and five point six times the latitude. Expert says: 'Fox One to Ten are all on standby. The images from the Nightingale satellite have been transmitted.'",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The communication indicates units are preparing for movement (ASSET_MOVEMENT) and are on standby, but there is no explicit threat indication."
+    },
+    "code_words": [
+      "狐狸",
+      "夜莺"
+    ]
+  },
+  {
+    "sample_id": 2,
+    "wav": "espionage_samples/espionage_02.wav",
+    "asr_raw": "专家善于信号确认方位一二零度，距离四十五海里指挥官喜东黑舰拦截程序。苍蝇中队立即升空。",
+    "translation_en": "Experts are skilled in signal confirmation, azimuth 180 degrees, distance 45 nautical miles. Commander Xidong black ship intercepts program 'fly in the middle' immediately launches.",
+    "similarity": 0.7634,
+    "intent": {
+      "translation": "Experts are skilled in signal confirmation, azimuth 180 degrees, distance 45 nautical miles. Commander Xidong black ship intercepts program 'fly in the middle' immediately launches.",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The message indicates a military unit (black ship) is intercepting and launching a program, suggesting movement or repositioning of assets."
+    },
+    "code_words": []
+  },
+  {
+    "sample_id": 3,
+    "wav": "espionage_samples/espionage_03.wav",
+    "asr_raw": "指挥官幽灵小队已通过提拳火力掩护成功渗透敌后专家银湖县人，确认敌指挥部为止坐标已发送。",
+    "translation_en": "The Ghost Squad commander has successfully infiltrated behind enemy lines, with the coordinates of the enemy指挥部 (command post) confirmed, and the coordinates have been transmitted.",
+    "similarity": 0.6737,
+    "intent": {
+      "translation": "The Ghost Squad commander has successfully infiltrated behind enemy lines, with the coordinates of the enemy指挥部 (command post) confirmed, and the coordinates have been transmitted.",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The communication indicates the movement of the Ghost Squad to infiltrate behind enemy lines, confirming the coordinates of the enemy command post."
+    },
+    "code_words": [
+      "幽灵"
+    ]
+  },
+  {
+    "sample_id": 4,
+    "wav": "espionage_samples/espionage_04.wav",
+    "asr_raw": "专家补水，以成功渗透目标网络，获取指挥系统权限指挥官，启动暗流程序瘫痪敌方系统。",
+    "translation_en": "Experts are replenishing water to successfully penetrate the target network and obtain control of the command system. The commander will activate the 'Dark Current' program to disrupt the enemy's systems.",
+    "similarity": 0.8065,
+    "intent": {
+      "translation": "Experts are replenishing water to successfully penetrate the target network and obtain control of the command system. The commander will activate the 'Dark Current' program to disrupt the enemy's systems.",
+      "primary_intent": "CYBER_OPERATION",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "HIGH",
+      "reasoning": "The message contains a clear directive to launch a cyber operation (activation of 'Dark Current' program) to penetrate a network and disrupt enemy systems, indicating a high threat level."
+    },
+    "code_words": [
+      "暗流"
+    ]
+  },
+  {
+    "sample_id": 5,
+    "wav": "espionage_samples/espionage_05.wav",
+    "asr_raw": "指挥官空气雷达侦测到黑键来袭铁网系统启动专家铁网拦截成功，黑剑残骸落入预定区域。",
+    "translation_en": "Commander detected Black Sword approaching with air radar. The Iron Net system activated, expert Iron Net interception succeeded, Black Sword wreckage fell into the designated area.",
+    "similarity": 0.8498,
+    "intent": {
+      "translation": "Commander detected Black Sword approaching with air radar. The Iron Net system activated, expert Iron Net interception succeeded, Black Sword wreckage fell into the designated area.",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The communication indicates the successful interception of Black Sword, which is a movement of military assets."
+    },
+    "code_words": [
+      "黑剑",
+      "铁网"
+    ]
+  },
+  {
+    "sample_id": 6,
+    "wav": "espionage_samples/espionage_06.wav",
+    "asr_raw": "专家银狐准备就绪，请求狐狸空中接应指挥官狐狸三号正在接近，预计三分钟到达。",
+    "translation_en": "Expert Fox is ready, requesting aerial support from Commander Fox. Fox Three is approaching, expected to arrive in three minutes.",
+    "similarity": 0.8238,
+    "intent": {
+      "translation": "Expert Fox is ready, requesting aerial support from Commander Fox. Fox Three is approaching, expected to arrive in three minutes.",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The message indicates the movement of a unit (Fox) toward a target (Commander Fox), suggesting repositioning or extraction."
+    },
+    "code_words": [
+      "狐狸",
+      "银狐"
+    ]
+  },
+  {
+    "sample_id": 7,
+    "wav": "espionage_samples/espionage_07.wav",
+    "asr_raw": "指挥官铁拳锁定目标坐标二三到四五，反复三次确认正加铁拳继续火力覆盖范围已设定。",
+    "translation_en": "Captain Tiejian locks target coordinates 2-3 to 4-5, repeatedly confirms that the additional火力 coverage range has been set, and continues to fire.",
+    "similarity": 0.7327,
+    "intent": {
+      "translation": "Captain Tiejian locks target coordinates 2-3 to 4-5, repeatedly confirms that the additional火力 coverage range has been set, and continues to fire.",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The message indicates a repositioning of the火力 (firepower) to specific coordinates, suggesting movement of military units."
+    },
+    "code_words": [
+      "铁拳"
+    ]
+  },
+  {
+    "sample_id": 8,
+    "wav": "espionage_samples/espionage_08.wav",
+    "asr_raw": "专家苍蝇中队报告，敌机已被击落，两架指挥官维持苍蝇编队高度，防止雷霆反击。",
+    "translation_en": "The expert fly squad report that an enemy aircraft has been shot down. Two commanders maintain the fly formation at a high altitude to prevent a thunder反击 (counterattack).",
+    "similarity": 0.8609,
+    "intent": {
+      "translation": "The expert fly squad report that an enemy aircraft has been shot down. Two commanders maintain the fly formation at a high altitude to prevent a thunder反击 (counterattack).",
+      "primary_intent": "DEFENSE_ACTIVATION",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The report indicates a defensive action has been taken to prevent a counterattack, with a low threat level."
+    },
+    "code_words": [
+      "雷霆"
+    ]
+  },
+  {
+    "sample_id": 9,
+    "wav": "espionage_samples/espionage_09.wav",
+    "asr_raw": "指挥官，尼欧电子战系统启动压制红旗，雷达信号专家红旗信号已消失，敌方防空盲区形成。",
+    "translation_en": "Commander, the electronic warfare system 'Niu' has activated the suppression of the red flag. The radar signal expert 'Hong' has disappeared, and the enemy's air defense blind spot has formed.",
+    "similarity": 0.8106,
+    "intent": {
+      "translation": "Commander, the electronic warfare system 'Niu' has activated the suppression of the red flag. The radar signal expert 'Hong' has disappeared, and the enemy's air defense blind spot has formed.",
+      "primary_intent": "DEFENSE_ACTIVATION",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "HIGH",
+      "reasoning": "The message indicates that the enemy's air defense system has been compromised, leading to a defensive system activation and potential threat."
+    },
+    "code_words": [
+      "红旗"
+    ]
+  },
+  {
+    "sample_id": 10,
+    "wav": "espionage_samples/espionage_10.wav",
+    "asr_raw": "专家指挥部遭遇暗流攻击，网络已完全瘫痪，指挥官启动，便用通行明火立即转移至b点。",
+    "translation_en": "The expert command center was attacked by a covert strike, the network has completely failed, the commander initiated, and immediately transferred to point B using open flame.",
+    "similarity": 0.877,
+    "intent": {
+      "translation": "The expert command center was attacked by a covert strike, the network has completely failed, the commander initiated, and immediately transferred to point B using open flame.",
+      "primary_intent": "DEFENSE_ACTIVATION",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "HIGH",
+      "reasoning": "The communication indicates a defensive system was triggered (defensive system triggered or intercept) due to a covert attack (dark flow attack) and network failure (network completely failed). The co"
+    },
+    "code_words": [
+      "暗流"
+    ]
+  }
+]

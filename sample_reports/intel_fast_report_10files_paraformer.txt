@@ -1,0 +1,172 @@
+========================================================================
+  MANDARIN SPEECH INTELLIGENCE REPORT
+  Generated   : 2026-04-22  21:56:13
+  ASR         : openai/whisper-large-v3-turbo
+  Analysis    : qwen3:1.7b via Ollama (translate + classify)
+  Files       : 10
+  Total time  : 79.8s  (8.0s/file)
+========================================================================
+
+SAMPLE 01  [espionage_01.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 指挥官狐狸编队准备军训，确认目标坐标三五点六倍纬。专家说道。狐狸一号至十号全员待命，夜莺卫星图像已传输。
+TRANSLATION (EN): General Fox is preparing the formation for military training, confirming the target coordinates as three and five point six times the latitude. Expert says: 'Fox One to Ten are all on standby. The images from the Nightingale satellite have been transmitted.'
+MEANING SCORE   : 78.3%  (loss: 21.7%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The communication indicates units are preparing for movement (ASSET_MOVEMENT) and are on standby, but there is no explicit threat indication.
+
+CODE WORDS      : Fox, Nightingale
+
+SAMPLE 02  [espionage_02.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家善于信号确认方位一二零度，距离四十五海里指挥官喜东黑舰拦截程序。苍蝇中队立即升空。
+TRANSLATION (EN): Experts are skilled in signal confirmation, azimuth 180 degrees, distance 45 nautical miles. Commander Xidong black ship intercepts program 'fly in the middle' immediately launches.
+MEANING SCORE   : 76.3%  (loss: 23.7%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The message indicates a military unit (black ship) is intercepting and launching a program, suggesting movement or repositioning of assets.
+
+CODE WORDS      : none detected
+
+SAMPLE 03  [espionage_03.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 指挥官幽灵小队已通过提拳火力掩护成功渗透敌后专家银湖县人，确认敌指挥部为止坐标已发送。
+TRANSLATION (EN): The Ghost Squad commander has successfully infiltrated behind enemy lines, with the coordinates of the enemy指挥部 (command post) confirmed, and the coordinates have been transmitted.
+MEANING SCORE   : 67.4%  (loss: 32.6%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The communication indicates the movement of the Ghost Squad to infiltrate behind enemy lines, confirming the coordinates of the enemy command post.
+
+CODE WORDS      : Ghost
+
+SAMPLE 04  [espionage_04.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家补水，以成功渗透目标网络，获取指挥系统权限指挥官，启动暗流程序瘫痪敌方系统。
+TRANSLATION (EN): Experts are replenishing water to successfully penetrate the target network and obtain control of the command system. The commander will activate the 'Dark Current' program to disrupt the enemy's systems.
+MEANING SCORE   : 80.7%  (loss: 19.4%)
+
+PRIMARY INTENT  : CYBER_OPERATION
+CONFIDENCE      : 95%
+THREAT LEVEL    : HIGH  🔴
+REASONING       : The message contains a clear directive to launch a cyber operation (activation of 'Dark Current' program) to penetrate a network and disrupt enemy systems, indicating a high threat level.
+
+CODE WORDS      : DarkCurrent
+
+SAMPLE 05  [espionage_05.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 指挥官空气雷达侦测到黑键来袭铁网系统启动专家铁网拦截成功，黑剑残骸落入预定区域。
+TRANSLATION (EN): Commander detected Black Sword approaching with air radar. The Iron Net system activated, expert Iron Net interception succeeded, Black Sword wreckage fell into the designated area.
+MEANING SCORE   : 85.0%  (loss: 15.0%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The communication indicates the successful interception of Black Sword, which is a movement of military assets.
+
+CODE WORDS      : BlackSword, IronNet
+
+SAMPLE 06  [espionage_06.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家银狐准备就绪，请求狐狸空中接应指挥官狐狸三号正在接近，预计三分钟到达。
+TRANSLATION (EN): Expert Fox is ready, requesting aerial support from Commander Fox. Fox Three is approaching, expected to arrive in three minutes.
+MEANING SCORE   : 82.4%  (loss: 17.6%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The message indicates the movement of a unit (Fox) toward a target (Commander Fox), suggesting repositioning or extraction.
+
+CODE WORDS      : Fox, SilverFox
+
+SAMPLE 07  [espionage_07.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 指挥官铁拳锁定目标坐标二三到四五，反复三次确认正加铁拳继续火力覆盖范围已设定。
+TRANSLATION (EN): Captain Tiejian locks target coordinates 2-3 to 4-5, repeatedly confirms that the additional火力 coverage range has been set, and continues to fire.
+MEANING SCORE   : 73.3%  (loss: 26.7%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The message indicates a repositioning of the火力 (firepower) to specific coordinates, suggesting movement of military units.
+
+CODE WORDS      : IronFist
+
+SAMPLE 08  [espionage_08.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家苍蝇中队报告，敌机已被击落，两架指挥官维持苍蝇编队高度，防止雷霆反击。
+TRANSLATION (EN): The expert fly squad report that an enemy aircraft has been shot down. Two commanders maintain the fly formation at a high altitude to prevent a thunder反击 (counterattack).
+MEANING SCORE   : 86.1%  (loss: 13.9%)
+
+PRIMARY INTENT  : DEFENSE_ACTIVATION
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The report indicates a defensive action has been taken to prevent a counterattack, with a low threat level.
+
+CODE WORDS      : Thunder
+
+SAMPLE 09  [espionage_09.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 指挥官，尼欧电子战系统启动压制红旗，雷达信号专家红旗信号已消失，敌方防空盲区形成。
+TRANSLATION (EN): Commander, the electronic warfare system 'Niu' has activated the suppression of the red flag. The radar signal expert 'Hong' has disappeared, and the enemy's air defense blind spot has formed.
+MEANING SCORE   : 81.1%  (loss: 18.9%)
+
+PRIMARY INTENT  : DEFENSE_ACTIVATION
+CONFIDENCE      : 95%
+THREAT LEVEL    : HIGH  🔴
+REASONING       : The message indicates that the enemy's air defense system has been compromised, leading to a defensive system activation and potential threat.
+
+CODE WORDS      : RedFlag
+
+SAMPLE 10  [espionage_10.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家指挥部遭遇暗流攻击，网络已完全瘫痪，指挥官启动，便用通行明火立即转移至b点。
+TRANSLATION (EN): The expert command center was attacked by a covert strike, the network has completely failed, the commander initiated, and immediately transferred to point B using open flame.
+MEANING SCORE   : 87.7%  (loss: 12.3%)
+
+PRIMARY INTENT  : DEFENSE_ACTIVATION
+CONFIDENCE      : 95%
+THREAT LEVEL    : HIGH  🔴
+REASONING       : The communication indicates a defensive system was triggered (defensive system triggered or intercept) due to a covert attack (dark flow attack) and network failure (network completely failed). The co
+
+CODE WORDS      : DarkCurrent
+
+
+========================================================================
+  SUMMARY
+========================================================================
+#    File                        Meaning Intent                     Threat    
+------------------------------------------------------------------------
+1    espionage_01.wav              78.3% ASSET_MOVEMENT             LOW       
+2    espionage_02.wav              76.3% ASSET_MOVEMENT             LOW       
+3    espionage_03.wav              67.4% ASSET_MOVEMENT             LOW       
+4    espionage_04.wav              80.7% CYBER_OPERATION            HIGH      
+5    espionage_05.wav              85.0% ASSET_MOVEMENT             LOW       
+6    espionage_06.wav              82.4% ASSET_MOVEMENT             LOW       
+7    espionage_07.wav              73.3% ASSET_MOVEMENT             LOW       
+8    espionage_08.wav              86.1% DEFENSE_ACTIVATION         LOW       
+9    espionage_09.wav              81.1% DEFENSE_ACTIVATION         HIGH      
+10   espionage_10.wav              87.7% DEFENSE_ACTIVATION         HIGH      
+
+  Avg meaning preserved : 79.8%
+
+  Intent breakdown:
+    ASSET_MOVEMENT                 6 sample(s)
+    DEFENSE_ACTIVATION             3 sample(s)
+    CYBER_OPERATION                1 sample(s)
+
+  Threat breakdown:
+    HIGH         3 sample(s)  🔴
+    LOW          7 sample(s)  🟢
+
+  Pipeline latency: 79.8s total  |  8.0s per file
+
+========================================================================
+  Report saved → intel_fast_report_20260422_215453.txt
+========================================================================

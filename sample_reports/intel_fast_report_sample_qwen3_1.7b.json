@@ -1,0 +1,90 @@
+[
+  {
+    "sample_id": 1,
+    "wav": "espionage_samples/espionage_06.wav",
+    "asr_raw": "专家银湖准备继续请求狐狸空中接引指挥官狐狸三号正在接近预计三分钟到达",
+    "translation_en": "Expert Silver Lake is preparing to continue requesting the Fox Airborne Command Officer, Fox Three, to approach within three minutes.",
+    "similarity": 0.706,
+    "intent": {
+      "translation": "Expert Silver Lake is preparing to continue requesting the Fox Airborne Command Officer, Fox Three, to approach within three minutes.",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The message indicates a planned movement of the Fox command unit towards the expected arrival time, suggesting repositioning or extraction operations."
+    },
+    "code_words": [
+      "狐狸"
+    ]
+  },
+  {
+    "sample_id": 2,
+    "wav": "espionage_samples/espionage_07.wav",
+    "asr_raw": "指挥官铁拳锁定目标坐标23-45反复三次确认正家铁拳继续火力覆盖范围已设定",
+    "translation_en": "Captain TIE locks target coordinates 23-45, confirms it repeatedly, and continues to cover the area already set.",
+    "similarity": 0.625,
+    "intent": {
+      "translation": "Captain TIE locks target coordinates 23-45, confirms it repeatedly, and continues to cover the area already set.",
+      "primary_intent": "STRIKE_AUTHORIZATION",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "LOW",
+      "reasoning": "The message indicates a command to fire, with the target coordinates and confirmation of coverage, but no explicit threat level is indicated."
+    },
+    "code_words": [
+      "铁拳"
+    ]
+  },
+  {
+    "sample_id": 3,
+    "wav": "espionage_samples/espionage_08.wav",
+    "asr_raw": "专家,苍蝇中队报告,敌机已被击落两架,指挥官,维持苍蝇面对高步,防止雷霆反击。",
+    "translation_en": "Expert, Company Fly report: Two enemy aircraft have been shot down. Commander, maintain the Fly unit facing high step, prevent Thunder反击.",
+    "similarity": 0.8509,
+    "intent": {
+      "translation": "Expert, Company Fly report: Two enemy aircraft have been shot down. Commander, maintain the Fly unit facing high step, prevent Thunder反击.",
+      "primary_intent": "DEFENSE_ACTIVATION",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "HIGH",
+      "reasoning": "The message indicates a defensive action is being taken to prevent a potential counterattack, suggesting a high threat level."
+    },
+    "code_words": [
+      "雷霆"
+    ]
+  },
+  {
+    "sample_id": 4,
+    "wav": "espionage_samples/espionage_09.wav",
+    "asr_raw": "指挥官牛电子站系统启动压制红旗雷达信号专家红旗信号已消失敌方防空盲区形成",
+    "translation_en": "Commander Niu activates the electronic station system to suppress the Red Flag radar signal. The expert Red Flag signal has disappeared, and the enemy's air defense blind zone has been formed.",
+    "similarity": 0.6633,
+    "intent": {
+      "translation": "Commander Niu activates the electronic station system to suppress the Red Flag radar signal. The expert Red Flag signal has disappeared, and the enemy's air defense blind zone has been formed.",
+      "primary_intent": "ASSET_MOVEMENT",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "HIGH",
+      "reasoning": "The command indicates the movement of a military asset (likely a radar expert or signal analyst) to create an air defense blind zone, which is a strategic movement to evade detection."
+    },
+    "code_words": [
+      "红旗"
+    ]
+  },
+  {
+    "sample_id": 5,
+    "wav": "espionage_samples/espionage_10.wav",
+    "asr_raw": "专家指挥部早已按流攻击网络已完全瘫痪指挥官启动便有通行您活立即转移至B点",
+    "translation_en": "The expert command center has already launched a cyber attack, and the commander has initiated permission for passage. You should immediately transfer to point B.",
+    "similarity": 0.7022,
+    "intent": {
+      "translation": "The expert command center has already launched a cyber attack, and the commander has initiated permission for passage. You should immediately transfer to point B.",
+      "primary_intent": "STRIKE_AUTHORIZATION",
+      "secondary_intent": null,
+      "confidence": 0.95,
+      "threat_level": "HIGH",
+      "reasoning": "The message indicates a military command to initiate a cyber attack and transfer units to a specific location, which is a high-threat scenario involving network disruption and unit movement."
+    },
+    "code_words": []
+  }
+]

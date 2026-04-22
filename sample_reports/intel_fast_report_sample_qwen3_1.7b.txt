@@ -1,0 +1,102 @@
+========================================================================
+  MANDARIN SPEECH INTELLIGENCE REPORT
+  Generated   : 2026-04-22  21:19:54
+  ASR         : openai/whisper-large-v3-turbo
+  Analysis    : qwen3:1.7b via Ollama (translate + classify)
+  Files       : 5
+  Total time  : 24.6s  (4.9s/file)
+========================================================================
+
+SAMPLE 01  [espionage_06.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家银湖准备继续请求狐狸空中接引指挥官狐狸三号正在接近预计三分钟到达
+TRANSLATION (EN): Expert Silver Lake is preparing to continue requesting the Fox Airborne Command Officer, Fox Three, to approach within three minutes.
+MEANING SCORE   : 70.6%  (loss: 29.4%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The message indicates a planned movement of the Fox command unit towards the expected arrival time, suggesting repositioning or extraction operations.
+
+CODE WORDS      : Fox
+
+SAMPLE 02  [espionage_07.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 指挥官铁拳锁定目标坐标23-45反复三次确认正家铁拳继续火力覆盖范围已设定
+TRANSLATION (EN): Captain TIE locks target coordinates 23-45, confirms it repeatedly, and continues to cover the area already set.
+MEANING SCORE   : 62.5%  (loss: 37.5%)
+
+PRIMARY INTENT  : STRIKE_AUTHORIZATION
+CONFIDENCE      : 95%
+THREAT LEVEL    : LOW  🟢
+REASONING       : The message indicates a command to fire, with the target coordinates and confirmation of coverage, but no explicit threat level is indicated.
+
+CODE WORDS      : IronFist
+
+SAMPLE 03  [espionage_08.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家,苍蝇中队报告,敌机已被击落两架,指挥官,维持苍蝇面对高步,防止雷霆反击。
+TRANSLATION (EN): Expert, Company Fly report: Two enemy aircraft have been shot down. Commander, maintain the Fly unit facing high step, prevent Thunder反击.
+MEANING SCORE   : 85.1%  (loss: 14.9%)
+
+PRIMARY INTENT  : DEFENSE_ACTIVATION
+CONFIDENCE      : 95%
+THREAT LEVEL    : HIGH  🔴
+REASONING       : The message indicates a defensive action is being taken to prevent a potential counterattack, suggesting a high threat level.
+
+CODE WORDS      : Thunder
+
+SAMPLE 04  [espionage_09.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 指挥官牛电子站系统启动压制红旗雷达信号专家红旗信号已消失敌方防空盲区形成
+TRANSLATION (EN): Commander Niu activates the electronic station system to suppress the Red Flag radar signal. The expert Red Flag signal has disappeared, and the enemy's air defense blind zone has been formed.
+MEANING SCORE   : 66.3%  (loss: 33.7%)
+
+PRIMARY INTENT  : ASSET_MOVEMENT
+CONFIDENCE      : 95%
+THREAT LEVEL    : HIGH  🔴
+REASONING       : The command indicates the movement of a military asset (likely a radar expert or signal analyst) to create an air defense blind zone, which is a strategic movement to evade detection.
+
+CODE WORDS      : RedFlag
+
+SAMPLE 05  [espionage_10.wav]
+------------------------------------------------------------------------
+TRANSCRIPT (ZH) : 专家指挥部早已按流攻击网络已完全瘫痪指挥官启动便有通行您活立即转移至B点
+TRANSLATION (EN): The expert command center has already launched a cyber attack, and the commander has initiated permission for passage. You should immediately transfer to point B.
+MEANING SCORE   : 70.2%  (loss: 29.8%)
+
+PRIMARY INTENT  : STRIKE_AUTHORIZATION
+CONFIDENCE      : 95%
+THREAT LEVEL    : HIGH  🔴
+REASONING       : The message indicates a military command to initiate a cyber attack and transfer units to a specific location, which is a high-threat scenario involving network disruption and unit movement.
+
+CODE WORDS      : none detected
+
+
+========================================================================
+  SUMMARY
+========================================================================
+#    File                        Meaning Intent                     Threat    
+------------------------------------------------------------------------
+1    espionage_06.wav              70.6% ASSET_MOVEMENT             LOW       
+2    espionage_07.wav              62.5% STRIKE_AUTHORIZATION       LOW       
+3    espionage_08.wav              85.1% DEFENSE_ACTIVATION         HIGH      
+4    espionage_09.wav              66.3% ASSET_MOVEMENT             HIGH      
+5    espionage_10.wav              70.2% STRIKE_AUTHORIZATION       HIGH      
+
+  Avg meaning preserved : 70.9%
+
+  Intent breakdown:
+    ASSET_MOVEMENT                 2 sample(s)
+    STRIKE_AUTHORIZATION           2 sample(s)
+    DEFENSE_ACTIVATION             1 sample(s)
+
+  Threat breakdown:
+    HIGH         3 sample(s)  🔴
+    LOW          2 sample(s)  🟢
+
+  Pipeline latency: 24.6s total  |  4.9s per file
+
+========================================================================
+  Report saved → intel_fast_report_20260422_211930.txt
+========================================================================

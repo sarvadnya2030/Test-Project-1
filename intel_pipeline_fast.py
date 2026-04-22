@@ -29,6 +29,11 @@ OLLAMA_RETRIES = 3
 OLLAMA_TIMEOUT = 60
 
 TOP5_DEFAULT = [
+    "espionage_samples/espionage_01.wav",
+    "espionage_samples/espionage_02.wav",
+    "espionage_samples/espionage_03.wav",
+    "espionage_samples/espionage_04.wav",
+    "espionage_samples/espionage_05.wav",
     "espionage_samples/espionage_06.wav",
     "espionage_samples/espionage_07.wav",
     "espionage_samples/espionage_08.wav",
@@ -219,19 +224,34 @@ def collect_wavs(args):
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# STEP 2: ASR — whisper-large-v3-turbo
+# STEP 2: ASR — paraformer-zh (primary) → whisper-large-v3-turbo (fallback)
+# paraformer: Alibaba DAMO, ~4.5% CER on Mandarin, real-time factor 0.1x
 # ══════════════════════════════════════════════════════════════════════════════
 
-def transcribe(wav_paths, gpu_free_gb):
-    # Use GPU only if >2 GiB free after Ollama model is loaded
+def transcribe_paraformer(wav_paths):
+    from funasr import AutoModel
+    model = AutoModel(
+        model="paraformer-zh",
+        vad_model="fsmn-vad",
+        punc_model="ct-punc",
+        log_level="ERROR",
+    )
+    transcripts = []
+    for wav in wav_paths:
+        try:
+            result = model.generate(input=wav, batch_size_s=300)
+            text = result[0]["text"].strip() if result else ""
+            transcripts.append(text)
+        except Exception as e:
+            print(f"  [warn] paraformer failed on {wav}: {e}")
+            transcripts.append(None)
+    return transcripts
+
+def transcribe_whisper(wav_paths, gpu_free_gb):
     use_gpu = torch.cuda.is_available() and gpu_free_gb > 2.0
     device  = 0 if use_gpu else -1
     dtype   = torch.float16 if use_gpu else torch.float32
-    dev_str = f"cuda (free={gpu_free_gb:.1f}GB)" if use_gpu else "cpu"
-
-    print(f"\n[Step 2] ASR  →  whisper-large-v3-turbo  ({dev_str})")
     from transformers import pipeline as hf_pipeline
-
     asr = hf_pipeline(
         "automatic-speech-recognition",
         model="openai/whisper-large-v3-turbo",
@@ -239,22 +259,45 @@ def transcribe(wav_paths, gpu_free_gb):
         device=device,
         torch_dtype=dtype,
     )
-
-    transcripts = []
-    t0 = time.time()
-    for i, wav in enumerate(tqdm(wav_paths, desc="  transcribing"), 1):
+    out = []
+    for wav in wav_paths:
         try:
-            result = asr(wav)
-            text   = result["text"].strip()
-            transcripts.append(text)
+            out.append(asr(wav)["text"].strip())
         except Exception as e:
-            print(f"  [warn] ASR failed on {wav}: {e}")
-            transcripts.append("")
+            print(f"  [warn] whisper failed on {wav}: {e}")
+            out.append("")
+    del asr; gc.collect()
+    if use_gpu: torch.cuda.empty_cache()
+    return out
+
+def transcribe(wav_paths, gpu_free_gb):
+    print(f"\n[Step 2] ASR  →  paraformer-zh  (primary)  +  whisper-large-v3-turbo  (fallback)")
+    t0 = time.time()
+
+    # Try paraformer first
+    try:
+        import funasr  # noqa — just check it's installed
+        transcripts = transcribe_paraformer(wav_paths)
+    except ImportError:
+        print("  [warn] funasr not installed — using whisper fallback")
+        transcripts = [None] * len(wav_paths)
+
+    # Whisper fallback for any failed samples
+    failed = [i for i, t in enumerate(transcripts) if t is None]
+    if failed:
+        print(f"  [fallback] whisper on {len(failed)} file(s)...")
+        fb_wavs = [wav_paths[i] for i in failed]
+        fb_out  = transcribe_whisper(fb_wavs, gpu_free_gb)
+        for idx, i in enumerate(failed):
+            transcripts[i] = fb_out[idx]
+
+    # Final safety — empty string for any remaining None
+    transcripts = [t if t is not None else "" for t in transcripts]
 
     elapsed = time.time() - t0
     print(f"  Done: {elapsed:.1f}s total  |  {elapsed/len(wav_paths):.1f}s per file")
-    del asr; gc.collect()
-    if use_gpu: torch.cuda.empty_cache()
+    for i, t in enumerate(transcripts, 1):
+        print(f"  [{i:02d}] {t[:80]}")
     return transcripts
 
 
